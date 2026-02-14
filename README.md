@@ -1,30 +1,31 @@
-# 🎙️ InterviewAI — AI-Powered Mock Interview Platform
+# 🎙️ Interview AI — AI-Powered Mock Interview Platform
 
-InterviewAI is a smart, full-stack mock interview platform designed to simulate real-life technical interviews. Leveraging AI, it generates role-specific questions, analyzes user responses, scores performance, and offers personalized feedback — all in one seamless experience.
+**Interview AI** is a cutting-edge, full-stack mock interview platform designed to help candidates ace technical interviews. Powered by Advanced AI (Google Gemini), it simulates realistic interview scenarios, provides real-time feedback, and helps users improve their communication and technical skills.
+
 ---
 
 ## 🚀 Features
 
 - 🧠 **AI-Generated Questions**  
-  Get tailored interview questions based on job role, tech stack, or your uploaded resume (PDF).
+  Get tailored interview questions based on job roles, tech stacks, or personal resumes.
 
-- 🎤 **Voice-Based Interviewing**  
-  Use your mic to respond — the AI converts speech to text and evaluates your answers.
+- 🎤 **Voice & Video Support**  
+  Simulate real interview environments with integrated voice-to-text and camera support.
 
-- ✍️ **Editable Transcripts**  
-  Fix any misinterpretations from the mic input before submitting for analysis.
+- 🔐 **Google OAuth Integration**  
+  Seamless and secure login using Google Authentication for a smooth user experience.
 
-- 📊 **Smart Scoring System**  
-  Your responses are scored on relevance, clarity, and depth.
+- 📧 **Personalized Feedback & Email Alerts**  
+  Receive detailed performance reports and feedback directly in the dashboard and via email.
 
-- 💡 **Personalized Feedback**  
-  Get improvement tips for each answer and your overall performance.
+- ✍️ **Smart Response Evaluation**  
+  AI-driven scoring system that analyzes clarity, relevance, and technical depth of answers.
 
-- 📁 **Resume Parsing**  
-  Upload a resume to get customized interview questions based on your skills and experience.
+- 📊 **Comprehensive Dashboard**  
+  Track your progress, view pass history, and analyze improvement over time.
 
-- 📈 **Test History & Dashboard**  
-  Track your past interviews, scores, and feedback — all in one place.
+- 📁 **Resume Parsing & Tailoring**  
+  Upload your resume to generate hyper-personalized interview paths.
 
 ---
 
@@ -33,15 +34,41 @@ InterviewAI is a smart, full-stack mock interview platform designed to simulate 
 | Category       | Technology       |
 |----------------|------------------|
 | **Frontend**   | Next.js, TypeScript, Tailwind CSS |
-| **Backend**    | Node.js, Express |
-| **Database**   | MongoDB          |
-| **AI & NLP**   | Google Gemini API |
+| **Backend**    | Node.js, Express (API Routes) |
+| **Database**   | MongoDB & Mongoose |
+| **AI Engine**  | Google Gemini AI |
+| **Auth**       | Google OAuth 2.0 |
 | **Voice Input**| Web Speech API |
+| **Mailing**    | Nodemailer |
 
 ---
 
-## 📦 Installation
+## 📦 Installation & Setup
 
 ```bash
-# Clone the repo
-git clone https://github.com/theeaashish/interview-ai
+# Clone the repository
+git clone https://github.com/Ashishkumar448/Interview-AI
+
+# Navigate to the directory
+cd interview-ai
+
+# Install dependencies
+npm install
+
+# Set up environment variables (.env)
+cp .env.example .env
+
+# Run the development server
+npm run dev
+```
+
+---
+
+## 🔗 Repository Link
+[https://github.com/Ashishkumar448/Interview-AI](https://github.com/Ashishkumar448/Interview-AI)
+
+## 🤝 Contributing
+Contributions are welcome! Feel free to open issues or submit pull requests.
+
+## 📄 License
+This project is licensed under the MIT License.
