@@ -1,0 +1,217 @@
+@import "tailwindcss";
+
+* {
+  font-family: var(--font-mazzard);
+}
+
+:root {
+  --background: #09090b;
+  --foreground: #fafafa;
+  --primary: #8b5cf6;
+  --primary-foreground: #ffffff;
+  --secondary: #d946ef;
+  --surface: #18181b;
+  --border: #27272a;
+  --input-bg: #1f1f23;
+  --nav-text: #a1a1aa;
+  --theme-color: #8b5cf6;
+  --theme-hover: #a78bfa;
+}
+
+@theme {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  background-color: var(--input-bg) !important;
+  -webkit-box-shadow: 0 0 0px 1000px var(--input-bg) inset !important;
+  transition: background-color 5000s ease-in-out 0s;
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+}
+
+@layer utilities {
+  .task-status {
+    @apply px-2 py-1 text-xs rounded-full;
+  }
+
+  .input-div {
+    @apply flex items-center max-sm:w-full justify-center bg-[var(--input-bg)] sm:w-[50vw] h-[64px] rounded-[8px] px-6 gap-5 border border-[var(--border)] focus-within:border-[var(--primary)] transition-all;
+  }
+
+  .input-field {
+    @apply w-full h-full text-base placeholder-zinc-500 font-semibold outline-none bg-transparent text-[var(--foreground)];
+  }
+
+  .btn-primary {
+    @apply flex bg-[var(--primary)] text-white w-full h-[64px] rounded-[8px] items-center justify-center gap-3 font-semibold cursor-pointer hover:bg-[var(--theme-hover)] transition-all;
+  }
+}
+
+/* .logo {
+  font-family: var(--font-radis);
+} */
+
+.nav-hover::after {
+  content: "";
+  position: absolute;
+  background-color: var(--primary);
+  height: 2px;
+  width: 0;
+  left: 0;
+  bottom: -4px;
+  transition: 0.3s;
+}
+
+.nav-hover:hover::after {
+  width: 100%;
+}
+
+.btn {
+  background: linear-gradient(to top, var(--theme-hover) 50%, var(--primary) 50%);
+  background-size: 100% 200%;
+  background-position: top;
+}
+
+.btn:hover {
+  background-position: bottom;
+  color: #000;
+}
+
+::selection {
+  background: #464646;
+}
+
+.bg {
+  background: linear-gradient(90deg, rgba(23, 20, 21, 1) 0%, rgba(35, 25, 30, 1) 100%);
+}
+
+.arrow-div {
+  animation: moveUpDown 3s ease-in-out infinite;
+}
+
+@keyframes moveUpDown {
+
+  0%,
+  100% {
+    top: 55vh;
+  }
+
+  50% {
+    top: 52vh;
+  }
+}
+
+.card {
+  box-shadow: 0 0 100px 5px #fff;
+}
+
+
+/* loader css */
+.three-body {
+  --uib-size: 35px;
+  --uib-speed: 0.8s;
+  --uib-color: #5D3FD3;
+  position: relative;
+  display: inline-block;
+  height: var(--uib-size);
+  width: var(--uib-size);
+  animation: spin78236 calc(var(--uib-speed) * 2.5) infinite linear;
+}
+
+.three-body__dot {
+  position: absolute;
+  height: 100%;
+  width: 30%;
+}
+
+.three-body__dot:after {
+  content: '';
+  position: absolute;
+  height: 0%;
+  width: 100%;
+  padding-bottom: 100%;
+  background-color: var(--uib-color);
+  border-radius: 50%;
+}
+
+.three-body__dot:nth-child(1) {
+  bottom: 5%;
+  left: 0;
+  transform: rotate(60deg);
+  transform-origin: 50% 85%;
+}
+
+.three-body__dot:nth-child(1)::after {
+  bottom: 0;
+  left: 0;
+  animation: wobble1 var(--uib-speed) infinite ease-in-out;
+  animation-delay: calc(var(--uib-speed) * -0.3);
+}
+
+.three-body__dot:nth-child(2) {
+  bottom: 5%;
+  right: 0;
+  transform: rotate(-60deg);
+  transform-origin: 50% 85%;
+}
+
+.three-body__dot:nth-child(2)::after {
+  bottom: 0;
+  left: 0;
+  animation: wobble1 var(--uib-speed) infinite calc(var(--uib-speed) * -0.15) ease-in-out;
+}
+
+.three-body__dot:nth-child(3) {
+  bottom: -5%;
+  left: 0;
+  transform: translateX(116.666%);
+}
+
+.three-body__dot:nth-child(3)::after {
+  top: 0;
+  left: 0;
+  animation: wobble2 var(--uib-speed) infinite ease-in-out;
+}
+
+@keyframes spin78236 {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes wobble1 {
+
+  0%,
+  100% {
+    transform: translateY(0%) scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: translateY(-66%) scale(0.65);
+    opacity: 0.8;
+  }
+}
+
+@keyframes wobble2 {
+
+  0%,
+  100% {
+    transform: translateY(0%) scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: translateY(66%) scale(0.65);
+    opacity: 0.8;
+  }
+}
